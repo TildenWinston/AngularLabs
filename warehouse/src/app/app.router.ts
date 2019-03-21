@@ -5,6 +5,7 @@ import { ReceiveProductComponent } from "./receiving/receive-product.component";
 import { ShipOrderComponent } from "./shipping/ship-order.component";
 import { InventoryComponent } from "./inventory/inventory.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
+import { ContactUsComponent } from "./contact-us/contact-us.component";
 
 const routes = [
     {path: "", component: DashboardComponent},
@@ -12,6 +13,7 @@ const routes = [
     {path: "receive", component: ReceiveProductComponent},
     {path: "ship/:orderID", component: ShipOrderComponent},
     {path: "inventory", component: InventoryComponent},
+    {path: "contact", component: ContactUsComponent},
     
 
 ];

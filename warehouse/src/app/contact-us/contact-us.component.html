@@ -1,0 +1,14 @@
+<form>
+  <div *ngFor="let address of addresses; let i=index">
+    <label id="{{'AddressID' + i}}">Address #{{i}}</label>
+    <input id="{{'AddressID' + i}}" type="text" [(ngModel)]="address.value" [name]="'AddressID' + i" />
+  </div>
+
+  <button (click)="addAddress()">Add address</button>
+
+  <button>Submit</button>
+
+</form>
+
+
+<p>{{addresses[0]}}</p>

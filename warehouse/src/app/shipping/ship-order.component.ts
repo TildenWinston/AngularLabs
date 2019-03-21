@@ -35,7 +35,7 @@ this.order.shipPostalCode = "5T4N-L33";
 this.order.status = 0;
 this.order.lines = [];
 const line1 = new OrderLine();
-line1.locationID = "02B1C";
+line1.locationID; //  = "02B1C";
 line1.price = 30.00;
 line1.productID = 55;
 line1.quantity = 2;
@@ -61,4 +61,18 @@ this.order.orderID=this._route.snapshot.params['orderID'];
 
   }
 
+  getBestLocation(OrderLine){
+  OrderLine.locationID = "01A1A";
+  console.log(OrderLine);
+  }
+  markAsShipped(Order){
+    Order.status = 1;
+  }
+  markWithProblem(Order){
+    Order.status = 2;
+  }
+  isReadyToShip(Order){
+    return Order.lines.every(line => line.picked);
+    
+  }
 }
