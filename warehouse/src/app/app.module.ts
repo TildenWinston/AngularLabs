@@ -11,6 +11,8 @@ import { routing } from './app.router';
 import { FormsModule } from "@angular/forms";
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ListOfOrdersComponent } from './shipping/list-of-orders/list-of-orders.component'
+import { HttpClientModule } from "@angular/common/http";
+//import { HttpsClientModule } from "@angular/common/https";
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ListOfOrdersComponent } from './shipping/list-of-orders/list-of-orders.
   imports: [
     BrowserModule,
     routing,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+   // HttpsClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
